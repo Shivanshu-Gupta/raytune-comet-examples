@@ -18,6 +18,9 @@ from datasets import load_dataset, load_metric
 from transformers import AutoTokenizer
 from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
 
+# python raytune_comet_huggingface.py -o --tiny
+# python raytune_comet_huggingface.py -o --tiny --gpus_per_trial=1
+
 parser = ArgumentParser()
 parser.add_argument('--tiny', action='store_true',
                     help='Use only 1000 samples of train set for faster search.')
@@ -126,7 +129,3 @@ if cmd_args.evaluate_best:
     print(eval_metrics)
     test_metrics = trainer.evaluate(encoded_dataset['test'], metric_key_prefix='test')
     print(test_metrics)
-
-
-# python qqp.py -o --tiny
-# python qqp.py -o --tiny --gpus_per_trial=1

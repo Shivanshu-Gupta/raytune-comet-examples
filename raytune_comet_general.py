@@ -82,10 +82,10 @@ def load_analysis(ray_dir, search_name, metric='mean_loss', mode='min'):
 
 
 if __name__ == "__main__":
-    # python raytune_comet.py --search_name smoke --max_num_epochs=20 --smoke_test --comet
-    # python raytune_comet.py --search_name random --max_num_epochs=20 --num_samples=4 --comet
-    # python raytune_comet.py --search_name hyperopt --max_num_epochs=20 --num_samples=4 --hyperopt --comet
-    # python raytune_comet.py --search_name hpspace1 --hp_space_idx=1 --max_num_epochs=20 --num_samples=1 --comet
+    # python raytune_comet_general.py --search_name smoke --max_num_epochs=20 --smoke_test --comet
+    # python raytune_comet_general.py --search_name random --max_num_epochs=20 --num_samples=4 --comet
+    # python raytune_comet_general.py --search_name hyperopt --max_num_epochs=20 --num_samples=4 --hyperopt --comet
+    # python raytune_comet_general.py --search_name hpspace1 --hp_space_idx=1 --max_num_epochs=20 --num_samples=1 --comet
 
     import argparse
     parser = argparse.ArgumentParser()
